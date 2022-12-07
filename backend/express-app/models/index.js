@@ -52,7 +52,12 @@ module.exports = db;
 
 const { userInfo } = require("os");
 const Sequelize = require("sequelize");
-const db = new Sequelize("postgres://localhost/wiki");
+const dbSequelize = new Sequelize(database, user, password, {
+  host,
+  port,
+  dialect: "postgres",
+  logging: false,
+});
 
 //all employees and all tasks
 // create and define model with sequelize
