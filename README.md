@@ -17,5 +17,7 @@ GET /favicon.ico 404 12.091 ms - 1502
 
 # necessary to install
 
-npm install sequelize
-npm install pg
+npm install sequelize //used to create the database through js
+npm install pg //postgres
+npm install nodemon // used for listening for changes on server
+npm run dev // script uses nodemon
