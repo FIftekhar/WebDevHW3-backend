@@ -101,6 +101,6 @@ const Employee = require("./employees");
 const Tasks = require("./tasks");
 
 module.exports = {
-  Employee,
-  Tasks,
+	Employee,
+	Tasks,
 };

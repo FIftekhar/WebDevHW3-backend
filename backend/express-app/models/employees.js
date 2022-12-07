@@ -5,26 +5,26 @@ import "./index.js";
 const db = require("../config/database");
 //make a employee mode which is defined as employee with these attributes
 const Employee = db.define(
-  "employee",
-  {
-    first_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    last_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    department: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-  }
-  // {
-  //   dbSequelize,
-  //   modelName: "employee",
-  //   timestamps: false,
-  // }
+	"employee",
+	{
+		first_name: {
+			type: DataTypes.STRING,
+			allowNull: false,
+		},
+		last_name: {
+			type: DataTypes.STRING,
+			allowNull: false,
+		},
+		department: {
+			type: DataTypes.STRING,
+			allowNull: false,
+		},
+	}
+	// {
+	//   dbSequelize,
+	//   modelName: "employee",
+	//   timestamps: false,
+	// }
 );
 await Employee.sync();
 
