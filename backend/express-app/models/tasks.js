@@ -1,38 +1,41 @@
 /** @format */
 
-import { Sequelize, Model, DataTypes } from "sequelize";
-import { post } from "../routes";
+import { Sequelize, DataTypes } from "sequelize";
 import "./index.js";
-class Employee extends Model {}
 
-Employee.init(
+const Tasks = db.define(
+  "tasks",
   {
-    first_name: {
+    description: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    last_name: {
+    priority_level: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    department: {
+    completion_status: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-  },
-  {
-    dbSequelize,
-    modelName: "employee",
-    timestamps: false,
   }
+  //   {
+  //     dbSequelize,
+  //     modelName: "tasks",
+  //     timestamps: false,
+  //   }
 );
-
+await Tasks.sync();
 // const results = await Employee.findAll();
 //for creating an entry and pass it into employee create func
 //await is used because create returns a promise
-const first_name = "Roger";
-const last_name = "Smith";
-const department = "Math";
-const result = await Employee.create({ first_name, last_name, department });
+const description = "do dishes";
+const priority_level = "HIGH";
+const completion_status = "NOT_DONE";
+const result = await Tasks.create({
+  description,
+  priority_level,
+  completion_status,
+});
 
-module.exports = Tasks;
+module.exports = Task;
