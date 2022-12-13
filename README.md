@@ -2,6 +2,13 @@
 
 # WebDevFinal-backend
 
+## Group Members
+[-] Fatin Iftekhar @FIftekhar
+[-] Arifur Rahman @arahman63
+[-] Irteza Ali @irtezaali
+
+## Instructions
+
 to run the express server, always remember to npm install when you're in the express.
 
 go to express-app folder which contains that package.json file that has the start script. the start script is basically running the www file from bin
